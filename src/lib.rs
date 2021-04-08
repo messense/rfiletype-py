@@ -20,9 +20,9 @@ fn from_file(path: &str) -> PyResult<Option<&'static str>> {
         .map_err(|e| pyo3::exceptions::PyOSError::new_err(e.to_string()))
 }
 
-/// tree-magic determines the MIME type a given file or byte stream
+/// rfiletype determines the MIME type a given file or byte stream
 #[pymodule]
-fn tree_magic(_py: Python, m: &PyModule) -> PyResult<()> {
+fn rfiletype(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add("__version__", env!("CARGO_PKG_VERSION"))?;
     m.add_function(wrap_pyfunction!(from_buffer, m)?)?;
     m.add_function(wrap_pyfunction!(from_file, m)?)?;
