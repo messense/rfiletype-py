@@ -13,6 +13,5 @@ readme = "README.md"
 crate-type = ["cdylib"]
 
 [dependencies]
-# infer = "0.3.6"
-infer = { git = "https://github.com/messense/infer.git", branch = "msoffice" }
+infer = "0.3.7"
 pyo3 = { version = "0.13.2", features = ["extension-module", "abi3-py36"] }
