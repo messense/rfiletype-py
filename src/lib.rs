@@ -1,5 +1,4 @@
 use pyo3::prelude::*;
-use pyo3::wrap_pyfunction;
 
 /// Gets the type of a file from a byte stream.
 ///
