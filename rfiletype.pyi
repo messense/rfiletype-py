@@ -1,0 +1,6 @@
+import os
+from typing import Optional, Union
+
+
+def from_buffer(buf: bytes) -> Optional[str]: ...
+def from_file(path: Union[str, bytes, os.PathLike]) -> Optional[str]: ...
